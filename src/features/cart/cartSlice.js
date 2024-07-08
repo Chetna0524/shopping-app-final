@@ -25,9 +25,9 @@ export const cartSlice = createSlice({
 		},
 		removeFromCart: (state, action) => {
 			const id = action.payload;
-			console.log("caretRemoveId", id);
+			//console.log("caretRemoveId", id);
 			let emptyCart = Boolean(state.cart.length);
-			console.log("emptycart", emptyCart);
+			//console.log("emptycart", emptyCart);
 			return {
 				...state,
 				isEmpty: Boolean(state.cart.length),

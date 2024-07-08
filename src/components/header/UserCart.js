@@ -26,7 +26,7 @@ const UserCart = () => {
 
 	//console.log("cartTotal", cartTotal);
 
-	if (!loading) console.log("user navbar", user);
+	//if (!loading) console.log("user navbar", user);
 
 	const logOut = () => {
 		auth.signOut();

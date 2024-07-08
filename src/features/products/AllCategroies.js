@@ -10,7 +10,7 @@ const AllCategories = () => {
 		isSuccess,
 		error,
 	} = useGetAllCategoriesQuery();
-	console.log("categories", categories);
+	//console.log("categories", categories);
 
 	let content;
 	if (isLoading) {

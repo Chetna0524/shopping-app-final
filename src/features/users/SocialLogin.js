@@ -21,8 +21,8 @@ const SocialLogin = () => {
 		const googleProvider = new GoogleAuthProvider();
 		try {
 			const res = await signInWithPopup(auth, googleProvider);
-			console.log("google", res);
-			console.log("googleUser", res?.user);
+			/* console.log("google", res);
+			console.log("googleUser", res?.user); */
 			dispatch(
 				loggedIn({
 					uid: res?.user?.uid,
@@ -40,8 +40,8 @@ const SocialLogin = () => {
 		const fbProvider = new FacebookAuthProvider();
 		try {
 			const res = await signInWithPopup(auth, fbProvider);
-			console.log("fb", res);
-			console.log("fbUser", res?.user);
+			/* console.log("fb", res);
+			console.log("fbUser", res?.user); */
 			dispatch(
 				loggedIn({
 					uid: res?.user?.uid,

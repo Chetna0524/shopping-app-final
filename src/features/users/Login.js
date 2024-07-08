@@ -32,7 +32,7 @@ const Login = () => {
 		const { email, password } = values;
 		try {
 			const res = await signInWithEmailAndPassword(auth, email, password);
-			console.log(res);
+			//console.log(res);
 			if (!loading) console.log("user login", user);
 
 			localStorage.setItem("accessToken", user?.accessToken);
@@ -60,7 +60,7 @@ const Login = () => {
 		onSubmit,
 	});
 
-	console.log("errors", formik.errors);
+	//console.log("errors", formik.errors);
 	return (
 		<>
 			<div className="login-sec user-auth-sec">

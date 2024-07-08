@@ -35,7 +35,7 @@ const SingleProduct = () => {
 		if (isSuccess) setQtyValue(product?.qty);
 	}, [isSuccess]);
 
-	console.log("singleProduct findP", product, productId);
+	//console.log("singleProduct findP", product, productId);
 
 	/* console.log("single", product.qty, qtyValue); */
 

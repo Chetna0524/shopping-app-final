@@ -9,7 +9,7 @@ const ProductItemBox = ({ id }) => {
 	const product = useSelector((state) => selectProductById(state, Number(id)));
 	//console.log("id", product);
 
-	console.log("productItemBox", product);
+	//console.log("productItemBox", product);
 	const dispatch = useDispatch();
 	return (
 		<div className="col-12 cat-item-box">
