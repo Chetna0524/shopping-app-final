@@ -11,9 +11,9 @@ export const cartSlice = createSlice({
 	reducers: {
 		addToCart: (state, action) => {
 			const { product, qty } = action.payload;
-			console.log("cart slice add", product, qty, state);
+			//console.log("cart slice add", product, qty, state);
 			let existingProduct = state.cart.find((p) => p.id === product.id);
-			console.log("cart slice exist", existingProduct);
+			//console.log("cart slice exist", existingProduct);
 			return {
 				isEmpty: false,
 				cart: existingProduct

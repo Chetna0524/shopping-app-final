@@ -18,7 +18,8 @@ const Cart = () => {
 
 	//console.log("cartTotal", cartTotal);
 
-	console.log("cart", cart, cart.isEmpty);
+	//console.log("cart", cart, cart.isEmpty);
+
 	if (cart.cart.length == 0) {
 		return (
 			<div className="container text-center emptyCart">
