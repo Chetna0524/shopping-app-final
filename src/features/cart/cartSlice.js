@@ -20,13 +20,13 @@ export const cartSlice = createSlice({
 					? state.cart.map((p) =>
 							p.id === existingProduct.id ? { ...p, qty: p.qty + qty } : p
 					  )
-					: [...state.cart, product],
+					: [...state.cart, { ...product, qty }],
 			};
 		},
 		removeFromCart: (state, action) => {
 			const id = action.payload;
 			//console.log("caretRemoveId", id);
-			let emptyCart = Boolean(state.cart.length);
+			//let emptyCart = Boolean(state.cart.length);
 			//console.log("emptycart", emptyCart);
 			return {
 				...state,

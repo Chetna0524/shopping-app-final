@@ -37,7 +37,7 @@ const SingleProduct = () => {
 
 	//console.log("singleProduct findP", product, productId);
 
-	/* console.log("single", product.qty, qtyValue); */
+	//console.log("single", product?.qty, qtyValue);
 
 	let content;
 	if (isLoading) {
@@ -66,7 +66,7 @@ const SingleProduct = () => {
 								<input
 									type="text"
 									value={qtyValue}
-									onChange={(e) => setQtyValue(e.target.value)}
+									onChange={(e) => setQtyValue(Number(e.target.value))}
 									className="form-control"
 								/>
 							</div>
@@ -74,9 +74,7 @@ const SingleProduct = () => {
 								type="submit"
 								className="btn-comm btn-black"
 								onClick={() =>
-									dispatch(
-										addToCart({ product: product, qty: Number(qtyValue) })
-									)
+									dispatch(addToCart({ product: product, qty: qtyValue }))
 								}
 							>
 								<AiOutlineShoppingCart /> Add to Cart
@@ -89,7 +87,7 @@ const SingleProduct = () => {
 	} else if (isError) {
 		console.log(error);
 	}
-	console.log(product?.images);
+	//console.log(product?.images);
 	return (
 		<>
 			<div className="single-product-sec p-4 mt-5">
