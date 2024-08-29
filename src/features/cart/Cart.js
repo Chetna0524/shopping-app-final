@@ -30,6 +30,7 @@ const Cart = () => {
 	}
 	let content = cart.cart.map((item) => {
 		let totalPrice = item.price * item.qty;
+
 		return (
 			<tr key={item.id}>
 				<td>
@@ -74,7 +75,7 @@ const Cart = () => {
 												<span>Total:</span>{" "}
 												<span>
 													<BsCurrencyDollar />
-													{cartTotal}
+													{cartTotal.toFixed(2)}
 												</span>
 											</th>
 											<th></th>
