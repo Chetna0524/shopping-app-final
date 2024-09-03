@@ -25,6 +25,8 @@ const validationSchema = yup.object({
 const Login = () => {
 	const [user, loading] = useAuthState(auth);
 	const [showPassword, setShowPassword] = useState(false);
+	const [error, setError] = useState(false);
+	const [errMsg, setErrorMsg] = useState("");
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
@@ -45,11 +47,13 @@ const Login = () => {
 				})
 			);
 			navigate("/");
-		} catch (error) {
-			console.log(error);
+		} catch (err) {
+			console.log(err, err.message);
+			setError(true);
+			setErrorMsg(err.message);
 		}
 	};
-
+	console.log(error, errMsg, !errMsg);
 	const formik = useFormik({
 		initialValues: {
 			email: "",
@@ -81,6 +85,11 @@ const Login = () => {
 							</h2>
 							<form onSubmit={formik.handleSubmit}>
 								<div className="user-auth-form">
+									{errMsg && (
+										<p className="text-danger text-center mb-0">
+											<small>{errMsg}</small>
+										</p>
+									)}
 									<div className="input-grp">
 										<AiOutlineUser className="input-icon" />
 										<input
