@@ -86,9 +86,12 @@ const Login = () => {
 							<form onSubmit={formik.handleSubmit}>
 								<div className="user-auth-form">
 									{errMsg && (
-										<p className="text-danger text-center mb-0">
+										<span
+											className="text-danger text-center mb-0"
+											style={{ display: "block" }}
+										>
 											<small>{errMsg}</small>
-										</p>
+										</span>
 									)}
 									<div className="input-grp">
 										<AiOutlineUser className="input-icon" />

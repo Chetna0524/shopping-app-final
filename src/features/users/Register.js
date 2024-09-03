@@ -85,7 +85,7 @@ const Register = () => {
 									{error && (
 										<span
 											className="text-center text-danger"
-											style={{ display: "inline-block" }}
+											style={{ display: "block" }}
 										>
 											<small>{error.message}</small>
 										</span>
